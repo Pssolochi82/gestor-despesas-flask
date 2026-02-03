@@ -1,66 +1,65 @@
-🇵🇹 Português
-📌 Descrição do Projeto
+# 📊 Gestor de Despesas | Expense Manager
 
-O Gestor de Despesas é uma aplicação web desenvolvida em Python com Flask, criada para registar, consultar e analisar despesas pessoais de forma simples e organizada.
-Este projeto foi desenvolvido no âmbito da UFCD de Programação Avançada com Python, aplicando conceitos fundamentais e avançados da linguagem, bem como boas práticas de desenvolvimento.
+## 🇵🇹 Português
 
-🎯 Objetivos do Projeto
+### 📌 Descrição
 
-Desenvolver aplicação web com Flask
-Aplicar Programação Orientada a Objetos
-Utilizar Decoradores para validação e registo de ações
-Trabalhar com análise de dados usando Pandas e NumPy
-Criar estrutura modular profissional
-Implementar persistência de dados
+O **Gestor de Despesas** é uma aplicação web desenvolvida com Python e Flask que permite registar, consultar e analisar despesas pessoais.
 
-⚙️ Funcionalidades
-✅ Registo de Despesas
+Este projeto foi desenvolvido no âmbito da UFCD de **Programação Avançada com Python**, aplicando boas práticas de desenvolvimento e conceitos avançados da linguagem.
 
+---
+
+### 🎯 Objetivos
+
+- Desenvolver aplicação web com Flask  
+- Aplicar Programação Orientada a Objetos  
+- Utilizar Decoradores para validação  
+- Trabalhar com análise de dados com Pandas e NumPy  
+- Criar arquitetura modular  
+- Implementar persistência de dados  
+
+---
+
+### ⚙️ Funcionalidades
+
+#### ✅ Registo de Despesas
 Permite inserir:
-Data
-Descrição
-Categoria
-Valor
+- Data  
+- Descrição  
+- Categoria  
+- Valor  
 
-✅ Consulta e Filtros
+#### ✅ Consulta e Filtros
+- Listagem completa  
+- Ordenação por data  
+- Filtro por categoria  
 
-Listagem completa de despesas
-Ordenação por data
-Filtro por categoria
-
-✅ Resumo Estatístico
-
+#### ✅ Resumo Estatístico
 Utilizando Pandas e NumPy:
-Total de despesas
-Média de gastos
-Desvio padrão
-Total por categoria
+- Total de despesas  
+- Média de gastos  
+- Desvio padrão  
+- Total por categoria  
 
-✅ Persistência de Dados
-
+#### ✅ Persistência de Dados
 Os dados são armazenados em:
-data/despesas.csv
-O sistema cria automaticamente o ficheiro caso não exista.
 
-🧠 Conceitos Aplicados
-Estruturas Python
 
-Listas
-Dicionários
-Tuplas
-Sets
-Programação Orientada a Objetos
-Classe principal:
-Despesa
+---
 
-Decoradores
+### 🧠 Conceitos Aplicados
 
-Utilizados para:
-Validação de dados
-Registo de ações
-Modularização
+- Estruturas de dados (List, Dict, Tuple, Set)  
+- Programação Orientada a Objetos  
+- Decoradores  
+- Modularização  
+- Desenvolvimento Web com Flask  
+- Análise de dados com Pandas e NumPy  
 
-Divisão do projeto em módulos independentes.
+---
+
+### 📁 Estrutura do Projeto
 
 gestor_despesas
 │
@@ -70,67 +69,66 @@ gestor_despesas
 ├── requirements.txt
 │
 ├── data
-│   └── despesas.csv
+│ └── despesas.csv
 │
 ├── templates
-│   ├── base.html
-│   ├── index.html
-│   └── resumo.html
+│ ├── base.html
+│ ├── index.html
+│ └── resumo.html
 │
 └── static
-    └── style.css
+└── style.css
 
-🧩 Como Executar
-Criar ambiente virtual
+
+---
+
+### 🧩 Como Executar
+
+```bash
 python -m venv venv
-
-Ativar ambiente virtual
 venv\Scripts\activate
-
-Executar aplicação
+pip install -r requirements.txt
 python app.py
-
-Abrir no navegador
 http://127.0.0.1:5000
 
-🧪 Testes Funcionais
+---
+### 🧪 Testes Funcionais
 
 ✔ Inserir despesas
 ✔ Filtrar por categoria
-✔ Visualizar resumo estatístico
+✔ Visualizar resumo
 ✔ Confirmar gravação no CSV
 
-🚀 Melhorias Futuras
+
+###🚀 Melhorias Futuras
 
 Integração com Base de Dados SQL
-Autenticação de utilizadores
-Exportação para Excel ou PDF
+Sistema de autenticação
+Exportação Excel/PDF
 Dashboard com gráficos
 Deploy online
 
+---
+## 🇬🇧 English
 
-🇬🇧 English
-📌 Project Description
+📌 Description
 
-The Expense Manager is a web application developed using Python and Flask, designed to register, manage and analyse personal expenses in a simple and organized way.
+The Expense Manager is a web application built with Python and Flask that allows users to register, manage and analyse personal expenses.
 
-This project was developed as part of an Advanced Python Programming course, applying fundamental and advanced programming concepts and software development best practices.
+This project was developed as part of an Advanced Python Programming course, applying modern development practices and advanced programming concepts.
 
-🎯 Project Goals
+---
 
-Develop a web application using Flask
+### 🎯 Goals
 
+Develop web application using Flask
 Apply Object-Oriented Programming
-
-Use decorators for validation and logging
-
-Perform data analysis with Pandas and NumPy
-
-Implement professional modular project structure
-
+Use decorators for validation
+Perform data analysis using Pandas and NumPy
+Implement modular architecture
 Implement data persistence
 
-⚙️ Features
+### ⚙️ Features
 ✅ Expense Registration
 
 Allows input of:
@@ -146,90 +144,56 @@ Amount
 ✅ Listing and Filtering
 
 Full expense listing
-
 Sorting by date
-
 Category filtering
+---
 
 ✅ Statistical Summary
 
 Using Pandas and NumPy:
-
 Total expenses
-
 Average spending
-
 Standard deviation
-
 Total per category
+---
 
 ✅ Data Persistence
 
 Data is stored in:
 data/despesas.csv
-The system automatically creates the file if it does not exist.
 
-🧠 Applied Concepts
-Python Data Structures
+---
+### 🧠 Applied Concepts
 
-Lists
-Dictionaries
-Tuples
-Sets
+Data structures
 Object-Oriented Programming
-
-Main class:
-
-Expense
 Decorators
+Modular architecture
+Flask Web Development
+Data analysis with Pandas and NumPy
 
-Used for:
-
-Data validation
-Action logging
-Modular Architecture
-
-Project divided into independent modules.
-
-📁 Project Structure
-
-(Same structure as Portuguese version)
-
-🧩 How to Run
-Create virtual environment
+### 🧩 How to Run
 python -m venv venv
-
-Activate environment
 venv\Scripts\activate
-
-Install dependencies
 pip install -r requirements.txt
-
-Run application
 python app.py
 
-Open in browser
+---
+## Open in browser:
 http://127.0.0.1:5000
 
-🧪 Functional Testing
-
+---
+## 🧪 Functional Testing
 ✔ Add expenses
 ✔ Filter by category
-✔ View statistical summary
+✔ View summary
 ✔ Verify CSV storage
+---
 
-🚀 Future Improvements
-SQL database integration
-User authentication
-Excel/PDF export
-Dashboard with charts
-Cloud deployment
-
-👩‍💻 Author | Autora
+👩‍💻 Author
 
 Palmira Solochi
 Curso Técnico de Programação – IEFP
 2026
-
 
 
