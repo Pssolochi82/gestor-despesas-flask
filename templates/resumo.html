@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% set title = "Resumo" %}
+
+{% block content %}
+<section class="card">
+  <h2>Resumo geral</h2>
+
+  <div class="stats">
+    <div class="stat">
+      <span>Total</span>
+      <strong>{{ "%.2f"|format(resumo.total) }} €</strong>
+    </div>
+    <div class="stat">
+      <span>Média</span>
+      <strong>{{ "%.2f"|format(resumo.media) }} €</strong>
+    </div>
+    <div class="stat">
+      <span>Desvio padrão</span>
+      <strong>{{ "%.2f"|format(resumo.desvio) }}</strong>
+    </div>
+    <div class="stat">
+      <span>Nº registos</span>
+      <strong>{{ resumo.count }}</strong>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Total por categoria</h2>
+
+  {% if por_categoria %}
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Categoria</th>
+            <th class="right">Total (€)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in por_categoria %}
+            <tr>
+              <td><span class="pill">{{ item.categoria }}</span></td>
+              <td class="right">{{ "%.2f"|format(item.valor) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="muted">Sem dados para resumir.</p>
+  {% endif %}
+</section>
+{% endblock %}

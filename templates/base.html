@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or "Gestor de Despesas" }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div>
+        <h1 class="brand">Gestor de Despesas</h1>
+        <p class="subtitle">Simples, claro e bem organizado — como deve ser.</p>
+      </div>
+      <nav class="nav">
+        <a href="{{ url_for('index') }}">Registos</a>
+        <a href="{{ url_for('resumo') }}">Resumo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <section class="alerts">
+          {% for category, msg in messages %}
+            <div class="alert alert--{{ category }}">{{ msg }}</div>
+          {% endfor %}
+        </section>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>IEFP • Python • Flask • Pandas • NumPy</small>
+    </div>
+  </footer>
+</body>
+</html>

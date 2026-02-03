@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% set title = "Registos" %}
+
+{% block content %}
+<section class="card">
+  <h2>Adicionar despesa</h2>
+
+  <form class="form" method="post" action="{{ url_for('adicionar') }}">
+    <div class="grid">
+      <label>
+        <span>Data</span>
+        <input type="date" name="data_str" value="{{ hoje }}" required>
+
+      </label>
+
+      <label>
+        <span>Categoria</span>
+        <select name="categoria" required>
+          {% for c in categorias %}
+            <option value="{{ c }}">{{ c }}</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <label class="grid-span-2">
+        <span>Descrição</span>
+        <input type="text" name="descricao" placeholder="Ex.: Supermercado" required>
+      </label>
+
+      <label>
+        <span>Valor (€)</span>
+        <input type="text" name="valor_str" placeholder="Ex.: 12,50" required>
+      </label>
+
+      <div class="actions">
+        <button class="btn" type="submit">Guardar</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="card">
+  <div class="row">
+    <h2>Lista de despesas</h2>
+
+    <form method="get" class="row__right">
+      <select name="categoria">
+        <option value="">Todas</option>
+        {% for c in categorias %}
+          <option value="{{ c }}" {% if c == categoria_filtro %}selected{% endif %}>{{ c }}</option>
+        {% endfor %}
+      </select>
+      <button class="btn btn--ghost" type="submit">Filtrar</button>
+      <a class="btn btn--ghost" href="{{ url_for('index') }}">Limpar filtro</a>
+    </form>
+  </div>
+
+  {% if despesas %}
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Categoria</th>
+            <th class="right">Valor (€)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for d in despesas %}
+            <tr>
+              <td>{{ d.data }}</td>
+              <td>{{ d.descricao }}</td>
+              <td><span class="pill">{{ d.categoria }}</span></td>
+              <td class="right">{{ "%.2f"|format(d.valor) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <form method="post" action="{{ url_for('adicionar') }}">
+      <button class="btn btn--danger" type="submit">Limpar todos os dados</button>
+    </form>
+  {% else %}
+    <p class="muted">Ainda não há despesas registadas.</p>
+  {% endif %}
+</section>
+{% endblock %}
