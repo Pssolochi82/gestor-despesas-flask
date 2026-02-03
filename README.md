@@ -60,7 +60,8 @@ Os dados são armazenados em:
 ---
 
 ### 📁 Estrutura do Projeto
-´´´
+```
+
 gestor_despesas
 │
 ├── app.py
@@ -78,7 +79,8 @@ gestor_despesas
 │
 └── static
 └── style.css
-´´´
+
+```
 
 ---
 
