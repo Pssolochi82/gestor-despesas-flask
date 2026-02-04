@@ -22,6 +22,18 @@
         </select>
       </label>
 
+      <section class="card">
+  <div class="row">
+    <h2>Resumo do mês</h2>
+    <div class="pill">
+      Total {{ "%02d"|format(mes_atual) }}/{{ ano_atual }}:
+      <strong>{{ "%.2f"|format(total_mes) }} €</strong>
+    </div>
+  </div>
+</section>
+
+
+
       <label class="grid-span-2">
         <span>Descrição</span>
         <input type="text" name="descricao" placeholder="Ex.: Supermercado" required>

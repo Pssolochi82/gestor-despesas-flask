@@ -4,20 +4,22 @@
 
 ### 📌 Descrição
 
-O **Gestor de Despesas** é uma aplicação web desenvolvida com Python e Flask que permite registar, consultar e analisar despesas pessoais.
+O **Gestor de Despesas** é uma aplicação web desenvolvida com **Python e Flask**, que permite registar, consultar, filtrar e analisar despesas pessoais de forma simples, organizada e intuitiva.
 
-Este projeto foi desenvolvido no âmbito da UFCD de **Programação Avançada com Python**, aplicando boas práticas de desenvolvimento e conceitos avançados da linguagem.
+Este projeto foi desenvolvido no âmbito da UFCD de **Programação Avançada com Python**, aplicando conceitos fundamentais e avançados da linguagem, bem como boas práticas de desenvolvimento de software.
+
+> 🔹 **Este projeto é 100% da minha autoria**, desde a conceção da ideia até à implementação técnica final, tendo sido desenvolvido de forma autónoma com foco em organização, robustez e clareza do código.
 
 ---
 
 ### 🎯 Objetivos
 
-- Desenvolver aplicação web com Flask  
+- Desenvolver uma aplicação web utilizando Flask  
 - Aplicar Programação Orientada a Objetos  
-- Utilizar Decoradores para validação  
-- Trabalhar com análise de dados com Pandas e NumPy  
-- Criar arquitetura modular  
-- Implementar persistência de dados  
+- Utilizar Decoradores para validação e controlo de ações 
+- Trabalhar com análise de dados usando Pandas e NumPy  
+- Criar arquitetura modular e proficional  
+- Implementar persistência de dados com SQLite 
 
 ---
 
@@ -62,23 +64,27 @@ Os dados são armazenados em:
 ### 📁 Estrutura do Projeto
 ```
 
-gestor_despesas
+## 🗂️ Estrutura do Projeto
+
+```text
+gestor_despesas/
+├─ app.py                # Rotas Flask + lógica da aplicação
+├─ models.py             # Classe Despesa (OOP)
+├─ utils.py              # Decoradores + validações
+├─ requirements.txt      # Dependências
+├─ .gitignore            # Ficheiros ignorados pelo Git
 │
-├── app.py
-├── models.py
-├── utils.py
-├── requirements.txt
+├─ data/
+│  └─ despesas.csv       # Dados (gerado automaticamente)
 │
-├── data
-│ └── despesas.csv
+├─ templates/            # HTML (Jinja2)
+│  ├─ base.html
+│  ├─ index.html
+│  └─ resumo.html
 │
-├── templates
-│ ├── base.html
-│ ├── index.html
-│ └── resumo.html
-│
-└── static
-└── style.css
+└─ static/               # CSS e assets
+   └─ style.css
+
 
 ```
 
