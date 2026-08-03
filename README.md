@@ -202,6 +202,6 @@ http://127.0.0.1:5000
 
 Palmira Solochi
 Curso Técnico de Programação – IEFP
-2026
+2025-2026
 
 
